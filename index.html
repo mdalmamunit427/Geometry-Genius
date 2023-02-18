@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius | A Mind Game of 2023</title>
+    <!-- fontawesome kits -->
+    <script src="https://kit.fontawesome.com/c8cd5d7521.js" crossorigin="anonymous"></script>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid  px-3">
+              <a class="navbar-brand"><span class="site-title">Interactive</span> <br><small>Geometry Genius</small></a>
+              <form class="d-flex" role="search">
+                <button class="btn btn-primary py-2 px-5 fw-bold" type="submit">Blog</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <!-- section 1 -->
+    <section class="container-fluid px-3 py-3">
+       <div class="row">
+        <!-- all cards area -->
+       
+        <div class="col-12 col-lg-8 shape-card">
+            <div class="row row-cols-1 row-cols-md-3 g-4 text-center" id="card-1">
+                <!-- Triangle section -->
+                <div class="col">
+                  <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                    <img src="images/triangle.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Triangle</h5>
+                      <p class="card-text">Area (A) = 0.5 x b x h</p>
+                      <!-- input fields and button -->
+                      <div class="row px-3">
+                        <div class="col d-flex align-items-center gap-2 w-50">
+                          <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                          cm
+                        </div>
+                        <div class="col d-flex align-items-center gap-2 w-50">
+                          <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                          cm
+                        </div>
+                        <button class="btn btn-primary my-4">Calculate</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Rectangle section -->
+                <div class="col">
+                  <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                    <img src="images/rectangle.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Rectangle</h5>
+                      <p class="card-text">Area (A) = w x I</p>
+                      <div class="row px-3">
+                        <div class="col d-flex align-items-center gap-2 w-50">
+                          <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                          cm
+                        </div>
+                        <div class="col d-flex align-items-center gap-2 w-50">
+                          <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                          cm
+                        </div>
+                        <button class="btn btn-primary my-4">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Parallelogram section -->
+                <div class="col">
+                  <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                    <img src="images/parallelogram.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Parallelogram</h5>
+                      <p class="card-text">Area (A) = b x h</p>
+                      <p>b=10cm, h=12cm <span class="ps-1 edit-btn"><i class="fa-regular fa-pen-to-square" onclick="displayInputField()"></i></span></p>
+                      <div class="row px-3">
+                        <div class="parallelogram-field">
+                            <div class="d-flex gap-2">
+                                <div class="col d-flex align-items-center gap-2 w-50">
+                                    <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                                    cm
+                                  </div>
+                                  <div class="col d-flex align-items-center gap-2 w-50">
+                                    <input type="text" class="form-control w-75" placeholder="h" aria-label="base of Triangle"> 
+                                    cm
+                                  </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary my-4">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Rhombus Section -->
+                <div class="col">
+                    <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                      <img src="images/rhombus.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                      <div class="card-body">
+                        <h5 class="card-title">Rhombus</h5>
+                        <p class="card-text">Area (A) = 0.5 x d1 x d2</p>
+                        <p>d1=16cm, d2=8cm <span class="ps-1 edit-btn"><i onclick="displayInputField()" class="fa-regular fa-pen-to-square"></i></span></p>
+                        <div class="row px-3">
+                          <div class="parallelogram-field">
+                              <div class="d-flex gap-2">
+                                  <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="d1" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                                    <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="d2" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                              </div>
+                          </div>
+  
+                          <button class="btn btn-primary my-4">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Pentagon section -->
+                <div class="col">
+                    <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                      <img src="images/pentagon.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                      <div class="card-body">
+                        <h5 class="card-title">Pentagon</h5>
+                        <p class="card-text">Area (A) = 0.5 x p x b</p>
+                        <p>p = 6cm, b = 10cm <span class="ps-1 edit-btn"><i class="fa-regular fa-pen-to-square" onclick="displayInputField()" ></i></span></p>
+                        <div class="row px-3">
+                          <div class="parallelogram-field">
+                              <div class="d-flex gap-2">
+                                  <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="p" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                                    <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                              </div>
+                          </div>
+  
+                          <button class="btn btn-primary my-4">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Ellipse section -->
+                <div class="col">
+                    <div class="card h-100" onmouseover="getRndColor(this)" onmouseout="normalColor(this)">
+                      <img src="images/ellipse.png" class="card-img-top img-fluid p-3" alt="..." style="height: 194px;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ellipse</h5>
+                        <p class="card-text">Area (A) = <span class="fs-4">π</span> ab</p>
+                        <p>a = 10cm, b = 4cm <span class="ps-1 edit-btn"><i class="fa-regular fa-pen-to-square" onclick="displayInputField()" ></i></span></p>
+                        <div class="row px-3">
+                          <div class="parallelogram-field">
+                              <div class="d-flex gap-2">
+                                  <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="a" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                                    <div class="col d-flex align-items-center gap-2 w-50">
+                                      <input type="text" class="form-control w-75" placeholder="b" aria-label="base of Triangle"> 
+                                      cm
+                                    </div>
+                              </div>
+                          </div>
+  
+                          <button class="btn btn-primary my-4">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+        <!-- calculation area -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <!-- calculation area -->
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-decoration-underline">Area Calculation</h5>
+                  <div>
+                    All items list
+                  </div>
+                </div>
+              </div>
+
+        </div>
+       </div>
+
+    </section>
+
+
+    <!-- js tags here -->
+    <script src="js/main.js"></script>
+    <script src="js/randomColor.js"></script>
+</body>
+</html>

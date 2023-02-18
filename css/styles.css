@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+}
+header{
+    background: #1090D8;
+}
+.site-title{
+    font-size: 45px;
+    padding-top: -5px;
+}
+
+.parallelogram-field {
+    display: none;
+    /* display: block; */
+}
+
+.edit-btn{
+    cursor: pointer;
+}
+.parallelogram-field.active{
+    display: block !important;
+}
